@@ -90,6 +90,25 @@ const TARGET_LABELS = [
   ["tenifold_wilcox_p","scTenifoldKnk Wilcoxon p"],["tenifold_n_sig_all","scTenifoldKnk n sig (all genes)"],
   ["geneMR_OR","Gene MR OR"],["geneMR_p","Gene MR p"],["coloc_PPH4","Coloc PP.H4"],["SMR_p","SMR p"],["HEIDI_p","HEIDI p"],
   ["geneformer_status","Geneformer"]];
+const ENUM_LABELS = {
+  not_simulable_no_GRN_incoming_edges:{en:"not simulable (no incoming GRN edges)",zh:"不可模拟（GRN 无入边）"},
+  not_in_panel:{en:"not in the KO panel",zh:"不在敲除面板内"},
+  tested_both:{en:"tested in cM and cDC",zh:"cM 与 cDC 均已测"},
+  tested_cM_only:{en:"tested in cM only",zh:"仅 cM 已测"},
+  tested_cDC_only:{en:"tested in cDC only",zh:"仅 cDC 已测"},
+  planned_pending_platform_decision:{en:"planned — pending (Geneformer platform decision)",zh:"已计划——待定（Geneformer 平台）"},
+  not_planned:{en:"not planned",zh:"未计划"},
+  program_gene_and_genetic_anchor:{en:"program gene & genetic anchor",zh:"程序基因兼遗传锚点"},
+  upstream_TF_regulator:{en:"upstream TF regulator",zh:"上游 TF 调控因子"},
+  negative_control:{en:"negative control",zh:"阴性对照"},
+  none:{en:"none",zh:"无"}, ligand:{en:"ligand",zh:"配体"}, receptor:{en:"receptor",zh:"受体"}
+};
+function humanize(v){
+  if (v === true) return LANG === "zh" ? "是" : "Yes";
+  if (v === false) return LANG === "zh" ? "否" : "No";
+  if (typeof v === "string" && ENUM_LABELS[v]) return ENUM_LABELS[v][LANG] || ENUM_LABELS[v].en;
+  return v;
+}
 function kvHTML(r, labels){
   labels = labels || FIELD_LABELS;
   let h = '<div class="kv">';
@@ -98,7 +117,7 @@ function kvHTML(r, labels){
     if (k === "sc_concordant_celltypes" && v !== null && v !== undefined)
       v = v + " / " + r.sc_celltypes_tested;
     if (typeof v === "number") v = (Math.abs(v) < 0.001 && v !== 0) ? fSig(v) : f2(v);
-    if (v === null || v === undefined || v === "") v = "—";
+    if (v === null || v === undefined || v === "") v = "—"; else v = humanize(v);
     h += `<div><b>${lab}</b>${v}</div>`;
   });
   return h + "</div>";

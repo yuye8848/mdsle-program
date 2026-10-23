@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MD–SLE Shared Core Program — Gene Lookup & Evidence Matrix</title>
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <header>
@@ -53,8 +53,8 @@
 <footer>
   <div class="wrap"><span data-i18n="foot"></span></div>
 </footer>
-<script src="data.js?v=1"></script>
-<script src="app.js?v=1"></script>
-<script>window.rerender = function(){ renderMap(); }; renderMap();</script>
+<script src="data.js?v=2"></script>
+<script src="app.js?v=2"></script>
+<script>window.rerender = function(){ renderMap(); const g = document.getElementById("gene"); if (g && g.value.trim()) lookup(); }; renderMap();</script>
 </body>
 </html>
