@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test Your Gene List — MD–SLE Shared Core Program</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1 data-i18n="title">The MD–SLE shared core program</h1>
+    <p data-i18n="subtitle"></p>
+    <nav>
+      <a href="index.html" data-i18n="nav_lookup"></a>
+      <a href="analyze.html" class="on" data-i18n="nav_analyze"></a>
+      <a href="methods.html" data-i18n="nav_methods"></a>
+      <span class="sp"></span>
+      <button class="langbtn" id="langbtn" onclick="toggleLang()">中文</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="card">
+      <h2 data-i18n="an_h"></h2>
+      <p data-i18n="an_intro"></p>
+      <div class="cols">
+        <div><h3 data-i18n="your_up"></h3><textarea id="up" placeholder="TNFAIP3 NFKBIA NAMPT ..."></textarea></div>
+        <div><h3 data-i18n="your_dn"></h3><textarea id="dn" placeholder="PHC1 AGFG2 ..."></textarea></div>
+      </div>
+      <button class="go" onclick="runAnalyze()" data-i18n="run"></button>
+      <div id="anout" style="margin-top:16px"></div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap"><span data-i18n="foot"></span></div>
+</footer>
+<script src="data.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

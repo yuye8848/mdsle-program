@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD–SLE Shared Core Program — Gene Lookup & Evidence Matrix</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1 data-i18n="title">The MD–SLE shared core program</h1>
+    <p data-i18n="subtitle"></p>
+    <nav>
+      <a href="index.html" class="on" data-i18n="nav_lookup"></a>
+      <a href="analyze.html" data-i18n="nav_analyze"></a>
+      <a href="methods.html" data-i18n="nav_methods"></a>
+      <span class="sp"></span>
+      <button class="langbtn" id="langbtn" onclick="toggleLang()">中文</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="card">
+      <div class="stats">
+        <div class="stat"><b>123 / 65</b><span data-i18n="s_genes"></span></div>
+        <div class="stat"><b>14</b><span data-i18n="s_map"></span></div>
+        <div class="stat"><b>1.56 vs 0.59</b><span data-i18n="s_gap"></span></div>
+        <div class="stat"><b><a href="https://doi.org/10.5281/zenodo.23587697">10.5281/zenodo.23587697</a></b><span data-i18n="s_doi"></span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="lookup_h"></h2>
+      <p class="small" data-i18n="lookup_hint"></p>
+      <input type="text" id="gene" placeholder="TNFAIP3" onkeydown="if(event.key==='Enter')lookup()">
+      <button class="go" onclick="lookup()">Search / 查询</button>
+      <div id="geneout" style="margin-top:14px"></div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="map_h"></h2>
+      <table>
+        <thead><tr>
+          <th data-i18n="th_cohort"></th><th data-i18n="th_n"></th><th data-i18n="th_dup"></th>
+          <th data-i18n="th_ddn"></th><th data-i18n="th_S"></th><th data-i18n="th_p"></th>
+        </tr></thead>
+        <tbody id="maptbody"></tbody>
+      </table>
+      <p class="small" data-i18n="map_note"></p>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap"><span data-i18n="foot"></span></div>
+</footer>
+<script src="data.js?v=1"></script>
+<script src="app.js?v=1"></script>
+<script>window.rerender = function(){ renderMap(); }; renderMap();</script>
+</body>
+</html>
