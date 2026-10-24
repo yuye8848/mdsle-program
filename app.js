@@ -77,8 +77,7 @@ const FIELD_LABELS = [
   ["MD_logFC","MD logFC (GSE202657)"],["MD_adjP","MD adj. P"],["SLE_logFC","SLE logFC (GSE50772)"],["SLE_adjP","SLE adj. P"],
   ["sc_logFC_cM","sc logFC — classical monocytes"],["sc_logFC_ncM","sc logFC — non-classical monocytes"],["sc_logFC_cDC","sc logFC — cDC"],
   ["sc_concordant_celltypes","sc concordant cell types / of"],["cellchat_SLE","CellChat role (SLE)"],["cellchat_MD","CellChat role (MD)"],
-  ["geneMR_OR","Gene MR OR (MD outcome)"],["geneMR_p","Gene MR p"],["coloc_PPH4","Coloc PP.H4"],
-  ["SMR_p","SMR p"],["HEIDI_p","HEIDI p"],["oracle_status","CellOracle status"],
+["oracle_status","CellOracle status"],
   ["oracle_cM_program_delta","CellOracle Δ program (cM)"],["oracle_cDC_program_delta","CellOracle Δ program (cDC)"],
   ["tenifold_ratio_coreup_vs_bg","scTenifoldKnk ratio vs background"],["tenifold_perm_p","scTenifoldKnk permutation p"],
   ["geneformer_status","Geneformer"]];
@@ -88,7 +87,7 @@ const TARGET_LABELS = [
   ["oracle_cDC_program_delta","CellOracle Δ program (cDC)"],["oracle_cDC_frac_core_up_down","cDC frac core-up down"],
   ["tenifold_ratio_coreup_vs_bg","scTenifoldKnk ratio vs background"],["tenifold_perm_p","scTenifoldKnk permutation p"],
   ["tenifold_wilcox_p","scTenifoldKnk Wilcoxon p"],["tenifold_n_sig_all","scTenifoldKnk n sig (all genes)"],
-  ["geneMR_OR","Gene MR OR"],["geneMR_p","Gene MR p"],["coloc_PPH4","Coloc PP.H4"],["SMR_p","SMR p"],["HEIDI_p","HEIDI p"],
+
   ["geneformer_status","Geneformer"]];
 const ENUM_LABELS = {
   not_simulable_no_GRN_incoming_edges:{en:"not simulable (no incoming GRN edges)",zh:"不可模拟（GRN 无入边）"},
@@ -98,7 +97,7 @@ const ENUM_LABELS = {
   tested_cDC_only:{en:"tested in cDC only",zh:"仅 cDC 已测"},
   planned_pending_platform_decision:{en:"planned — pending (Geneformer platform decision)",zh:"已计划——待定（Geneformer 平台）"},
   not_planned:{en:"not planned",zh:"未计划"},
-  program_gene_and_genetic_anchor:{en:"program gene & genetic anchor",zh:"程序基因兼遗传锚点"},
+  program_gene:{en:"program gene",zh:"程序基因"},
   upstream_TF_regulator:{en:"upstream TF regulator",zh:"上游 TF 调控因子"},
   negative_control:{en:"negative control",zh:"阴性对照"},
   none:{en:"none",zh:"无"}, ligand:{en:"ligand",zh:"配体"}, receptor:{en:"receptor",zh:"受体"}
