@@ -45,7 +45,7 @@ const L = {
   conc_dn:{en:"of your down genes in the 123 set point down in the program",zh:"你的下调基因中（在 123 集内者）程序方向亦为下调的比例"},
   matched:{en:"matched to the 123 set",zh:"命中 123 集"},
   unmatched:{en:"unmatched",zh:"未命中"},
-  foot:{en:"Static research tool; all computation happens in your browser. Data: evidence matrix v1 (Geneformer layer pending).",zh:"静态研究工具，全部计算在浏览器内完成。数据：证据矩阵 v1（Geneformer 层待补）。"}
+  foot:{en:"Static research tool; all computation happens in your browser. Data: evidence matrix v2 (Geneformer layer complete — in-silico deletion in SLE classical monocytes).",zh:"静态研究工具，全部计算在浏览器内完成。数据：证据矩阵 v2（Geneformer 层已完成——SLE 经典单核细胞虚拟敲除）。"}
 };
 function T(k){ return (L[k] && L[k][LANG]) || (L[k] && L[k].en) || k; }
 function applyI18n(){
@@ -80,7 +80,8 @@ const FIELD_LABELS = [
 ["oracle_status","CellOracle status"],
   ["oracle_cM_program_delta","CellOracle Δ program (cM)"],["oracle_cDC_program_delta","CellOracle Δ program (cDC)"],
   ["tenifold_ratio_coreup_vs_bg","scTenifoldKnk ratio vs background"],["tenifold_perm_p","scTenifoldKnk permutation p"],
-  ["geneformer_status","Geneformer"]];
+  ["geneformer_status","Geneformer"],
+  ["geneformer_impact_pct_cM","Geneformer impact % — in-silico deletion, SLE classical monocytes"]];
 const TARGET_LABELS = [
   ["role","Role / 角色"],["in_123_program","In 123 program / 在 123 内"],
   ["oracle_cM_program_delta","CellOracle Δ program (cM)"],["oracle_cM_frac_core_up_down","cM frac core-up down"],
@@ -88,14 +89,15 @@ const TARGET_LABELS = [
   ["tenifold_ratio_coreup_vs_bg","scTenifoldKnk ratio vs background"],["tenifold_perm_p","scTenifoldKnk permutation p"],
   ["tenifold_wilcox_p","scTenifoldKnk Wilcoxon p"],["tenifold_n_sig_all","scTenifoldKnk n sig (all genes)"],
 
-  ["geneformer_status","Geneformer"]];
+  ["geneformer_status","Geneformer"],
+  ["geneformer_impact_pct_cM","Geneformer impact % — in-silico deletion, SLE classical monocytes"]];
 const ENUM_LABELS = {
   not_simulable_no_GRN_incoming_edges:{en:"not simulable (no incoming GRN edges)",zh:"不可模拟（GRN 无入边）"},
   not_in_panel:{en:"not in the KO panel",zh:"不在敲除面板内"},
   tested_both:{en:"tested in cM and cDC",zh:"cM 与 cDC 均已测"},
   tested_cM_only:{en:"tested in cM only",zh:"仅 cM 已测"},
   tested_cDC_only:{en:"tested in cDC only",zh:"仅 cDC 已测"},
-  planned_pending_platform_decision:{en:"planned — pending (Geneformer platform decision)",zh:"已计划——待定（Geneformer 平台）"},
+  tested_cM_deletion:{en:"tested — in-silico deletion in SLE classical monocytes",zh:"已测——SLE 经典单核细胞虚拟敲除"},
   not_planned:{en:"not planned",zh:"未计划"},
   program_gene:{en:"program gene",zh:"程序基因"},
   upstream_TF_regulator:{en:"upstream TF regulator",zh:"上游 TF 调控因子"},

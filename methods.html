@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Methods & Downloads — MD–SLE Shared Core Program</title>
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <header>
@@ -28,8 +28,8 @@
       <span class="small">程序定义：MD 发现队列（GSE202657，9/9）与 SLE 发现队列（GSE50772，61/20）中方向一致的差异基因构成 123 基因共享集（两病均 limma adj. P&lt;0.05 且 |logFC|&gt;0.585）；按独立队列方向复现层数分级（T0 三层 13 个、T1 两层 52、T2 一层 40、T3 零层 18），经自助稳定性选择锁定 65 基因核心程序（上调 36、下调 29）。</span></p>
       <p><b>Locked-formula scoring.</b> Per-sample ssGSEA scores (GSVA v2) for the up and down arms, computed separately, unchanged in every cohort. Cohort statistic: S = Cliff's δ(up) − Cliff's δ(down) with 10,000 label permutations. Declared input transforms: arrays as deposited; counts as log2(CPM+1); RPKM as log2(x+1).<br>
       <span class="small">锁定公式打分：逐样本 ssGSEA（GSVA v2）分别计算上调臂与下调臂，所有队列不作任何改动。队列统计量 S = Cliff's δ（上调）− Cliff's δ（下调），10,000 次标签置换。预先声明的输入变换：芯片用提交值；计数用 log2(CPM+1)；RPKM 用 log2(x+1)。</span></p>
-      <p><b>Evidence layers.</b> Single-cell localisation: donor-level pseudobulk of the CELLxGENE lupus atlas (program strongest in the myeloid/DC axis; cDC per-gene concordance 55/65). Communication: CellChat — no program gene is a ligand/receptor in SLE; NAMPT (VISFATIN) is the sole MD exception. Perturbation: CellOracle and scTenifoldKnk on upstream regulators (see target table); Geneformer layer pending.<br>
-      <span class="small">证据层：单细胞定位——CELLxGENE 狼疮图谱供体级伪 bulk，程序最强于髓系/DC 轴（cDC 逐基因一致 55/65）。细胞通讯——CellChat 显示 SLE 中无程序基因作配体/受体，MD 中仅 NAMPT（VISFATIN）例外。扰动——CellOracle 与 scTenifoldKnk 作用于上游调控因子（见靶点表）；Geneformer 层待补。</span></p>
+      <p><b>Evidence layers.</b> Single-cell localisation: donor-level pseudobulk of the CELLxGENE lupus atlas (program strongest in the myeloid/DC axis; cDC per-gene concordance 55/65). Communication: CellChat — no program gene is a ligand/receptor in SLE; NAMPT (VISFATIN) is the sole MD exception. Perturbation: CellOracle and scTenifoldKnk on upstream regulators (see target table); Geneformer in-silico deletion in SLE classical monocytes — Impact_component_percent: CEBPB 40.28%, TNFAIP3 35.65%, STAT1 28.71% (highest for CEBPB; see the target cards for the full-precision values).<br>
+      <span class="small">证据层：单细胞定位——CELLxGENE 狼疮图谱供体级伪 bulk，程序最强于髓系/DC 轴（cDC 逐基因一致 55/65）。细胞通讯——CellChat 显示 SLE 中无程序基因作配体/受体，MD 中仅 NAMPT（VISFATIN）例外。扰动——CellOracle 与 scTenifoldKnk 作用于上游调控因子（见靶点表）；Geneformer 虚拟敲除（SLE 经典单核细胞）——Impact_component_percent：CEBPB 40.28%、TNFAIP3 35.65%、STAT1 28.71%（CEBPB 最高；完整精度数值见各靶点卡片）。</span></p>
       <p><b>Reading the numbers.</b> In the evidence matrix, NA means “not tested under the pre-specified design”, never “tested and negative”. Overlap statistics on the Analyze page are descriptive research aids, not diagnostics.<br>
       <span class="small">读数规则：证据矩阵中 NA 表示“按预先设计未测”，不是“测了为阴性”。“算”页面的重叠统计是描述性研究辅助，不是诊断工具。</span></p>
     </div>
@@ -49,7 +49,7 @@
 <footer>
   <div class="wrap"><span data-i18n="foot"></span></div>
 </footer>
-<script src="data.js?v=2"></script>
-<script src="app.js?v=2"></script>
+<script src="data.js?v=3"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>
