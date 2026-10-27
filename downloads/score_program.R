@@ -2,7 +2,7 @@
 ## score_program.R - locked-formula scoring of the MD-SLE shared core program
 ##
 ## Companion script to the multi-layer evidence matrix
-## (Zenodo DOI: 10.5281/zenodo.23587697).
+## (Zenodo DOI: 10.5281/zenodo.23680382, version 2).
 ##
 ## The formula was locked before validation and is used unchanged across all
 ## cohorts of the study: ssGSEA (GSVA v2, ssgseaParam) of the 36 core-up genes
