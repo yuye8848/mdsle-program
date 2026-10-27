@@ -45,7 +45,7 @@ const L = {
   conc_dn:{en:"of your down genes in the 123 set point down in the program",zh:"你的下调基因中（在 123 集内者）程序方向亦为下调的比例"},
   matched:{en:"matched to the 123 set",zh:"命中 123 集"},
   unmatched:{en:"unmatched",zh:"未命中"},
-  foot:{en:"Static research tool; all computation happens in your browser. Data: evidence matrix v2 (Geneformer layer complete — in-silico deletion in SLE classical monocytes).",zh:"静态研究工具，全部计算在浏览器内完成。数据：证据矩阵 v2（Geneformer 层已完成——SLE 经典单核细胞虚拟敲除）。"}
+  foot:{en:"Static research tool; all computation happens in your browser. Data: evidence matrix v2, Zenodo v3 record (Geneformer layer complete — in-silico deletion in SLE classical monocytes).",zh:"静态研究工具，全部计算在浏览器内完成。数据：证据矩阵 v2，Zenodo 第 3 版记录（Geneformer 层已完成——SLE 经典单核细胞虚拟敲除）。"}
 };
 function T(k){ return (L[k] && L[k][LANG]) || (L[k] && L[k].en) || k; }
 function applyI18n(){
