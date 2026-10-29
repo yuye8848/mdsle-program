@@ -31,11 +31,6 @@ If you use this resource in your work, please cite:
 
 Companion manuscript: Lei P, Dong W, Tan J, Yang X. *A Shared Blood Immune Transcriptional Program in Ménière's Disease and Systemic Lupus Erythematosus: Computational Perturbation and Cross-Cohort Specificity Validation.* Submitted to PLOS ONE (2026).
 
-## Related resources
-
-- [PolypAtlas](https://polyp.erbihou.org/) — curated multi-omics resource for chronic rhinosinusitis with nasal polyps (CRSwNP)
-- [RhinitisAtlas](https://rhinitis.erbihou.org/) — unified public-transcriptome resource for allergic rhinitis
-
 ## Repository layout
 
 - This repository is the static website itself, served via GitHub Pages at the address above.
